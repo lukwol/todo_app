@@ -1,0 +1,6 @@
+[
+  {
+    "label": "gleam run",
+    "command": "gleam run"
+  }
+]

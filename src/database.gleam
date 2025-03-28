@@ -34,9 +34,8 @@ pub fn start() -> Result(Database(e), actor.StartError) {
 }
 
 /// Pushes a value onto the stack
-pub fn push(stack: Database(e), value: e) -> Subject(Message(e)) {
+pub fn push(stack: Database(e), value: e) -> Nil {
   process.send(stack, Push(value))
-  stack
 }
 
 /// Gets all elements from the stack
@@ -45,6 +44,6 @@ pub fn contents(stack: Database(e)) -> List(e) {
 }
 
 /// Stops the stack actor
-pub fn stop(stack: Database(e)) {
+pub fn stop(stack: Database(e)) -> Nil {
   process.send(stack, Shutdown)
 }

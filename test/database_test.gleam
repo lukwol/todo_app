@@ -9,10 +9,9 @@ pub fn main() {
 pub fn database_test() {
   let assert Ok(db) = database.start()
 
-  db
-  |> database.push(1)
-  |> database.push(2)
-  |> database.push(3)
+  database.push(db, 1)
+  database.push(db, 2)
+  database.push(db, 3)
 
   db
   |> database.contents
